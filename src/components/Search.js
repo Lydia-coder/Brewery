@@ -21,7 +21,7 @@ class Search extends React.Component {
           <input
             type="text"
             ref={this.searchRef}
-            placeholder="Hoppy"
+            placeholder="Hop, Ale, Pilsner, Stout.."
             //assign that ref to a DOM node
           />
           <input type="submit" value="Search" />

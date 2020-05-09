@@ -56,11 +56,12 @@ class Single extends Component {
             <h2>{beer.name}</h2>
             <p>{beer.description}</p>
           </div>
-          <img className="label" src={beer.labels.medium} alt={beer.name} />
-          <div className="deets">
-            {/* {this.renderGlass(beer)} */}
-            {this.renderAbv(beer)}
-          </div>
+          <img
+            className="label"
+            src={beer.labels ? beer.labels.medium : ""}
+            alt={beer.name}
+          />
+          <div className="deets">{this.renderAbv(beer)}</div>
           <div className="style">
             <h3> Info on {beer.style.shortName}</h3>
             <p>{beer.style.description}</p>

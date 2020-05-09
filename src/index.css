@@ -59,7 +59,7 @@ h1 a {
 .beer {
   background: #fff;
   padding: 1rem;
-  border-top: 1.5rem solid #e13e45;
+  border-top: 2.5rem solid #e13e45;
   flex: 1 0 auto;
   margin: 2rem;
   overflow: hidden;
@@ -93,6 +93,7 @@ h1 a {
   text-align: center;
   margin-bottom: 2rem;
   font-family: "Pacifico", cursive;
+  color: #e13e45;
 }
 
 .beers {
@@ -126,7 +127,7 @@ h1 a {
   flex-grow: 2;
   background: #e13e45;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 .search form > *[type="text"] {
@@ -151,6 +152,7 @@ h1 a {
   background: #fff;
   padding: 2rem;
   border-radius: 15px;
+  animation: fadeIn ease 6s;
 }
 
 .single-beer .label {
@@ -171,12 +173,9 @@ h1 a {
   font-size: 3rem;
   font-family: "Pacifico", cursive;
   text-align: center;
+  color: #e13e45;
 }
 
-.glass img {
-  float: left;
-  width: 200px;
-}
 .abv {
   font-size: 15px;
 }
