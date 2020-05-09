@@ -13,24 +13,20 @@ class Main extends Component {
   }
 
   componentDidMount() {
-    this.loadBeers();
+    //console.log(`mounting`);
+    const params = this.props.match.params || {};
+    const searchTerm = params.searchTerm || undefined;
+    this.loadBeers(searchTerm);
   }
 
-  // componentDidMount() {
-  //   //console.log(`mounting`);
-  //   const params = this.props.match.params || {};
-  //   const searchTerm = params.searchTerm || undefined;
-  //   this.loadBeers(searchTerm);
-  // }
-
-  // componentDidUpdate(prevProps) {
-  //   //console.log("did update");
-  //   const currentSearchTerm = this.props.match.params.searchTerm;
-  //   const oldSearchTerm = prevProps.match.params.searchTerm;
-  //   if (currentSearchTerm !== oldSearchTerm) {
-  //     this.loadBeers(currentSearchTerm);
-  //   }
-  // }
+  componentDidUpdate(prevProps) {
+    //console.log("did update");
+    const currentSearchTerm = this.props.match.params.searchTerm;
+    const oldSearchTerm = prevProps.match.params.searchTerm;
+    if (currentSearchTerm !== oldSearchTerm) {
+      this.loadBeers(currentSearchTerm);
+    }
+  }
 
   loadBeers = (searchTerm = "ale") => {
     this.setState({ loading: true });
@@ -45,7 +41,7 @@ class Main extends Component {
     fetch(`http://api.brewerydb.com/v2/search?key=${key}&q=${searchTerm}`)
       .then((data) => data.json())
       .then((beers) => {
-        console.log(beers);
+        console.log(beers, "beers");
         this.state.beers = beers.data.filter((beer) => !!beer.labels);
         this.setState({ beers: this.state.beers, loading: false });
         // save to local storage in case search for this again
@@ -60,7 +56,7 @@ class Main extends Component {
     return (
       <div>
         <Header siteName="Brewery 🍺 " />
-        <Search />
+        <Search history={this.props.history} />
         <Results beers={this.state.beers} loading={this.state.loading} />
       </div>
     );

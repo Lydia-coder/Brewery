@@ -10,7 +10,7 @@ class Search extends React.Component {
 
     console.log(searchTerm);
     // get the value of that input
-    //this.props.history.push(`/search/${searchTerm}`);
+    this.props.history.push(`/search/${searchTerm}`);
     console.log(this.props, "props?");
   };
 

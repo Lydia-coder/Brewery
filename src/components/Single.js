@@ -23,9 +23,10 @@ class Single extends Component {
     fetch(`http://api.brewerydb.com/v2/beer/${beerId}?key=${key}`)
       .then((data) => data.json())
       .then((res) => {
-        //console.log(res, "info");
+        console.log(res, "info");
         this.setState({ beer: res.data, loading: false });
-      });
+      })
+      .catch((err) => console.error(err));
   };
   //   renderGlass = (beer) => {
   //     if (!beer.glass) return;
@@ -55,13 +56,13 @@ class Single extends Component {
             <h2>{beer.name}</h2>
             <p>{beer.description}</p>
           </div>
-          <img className="label" src={beer.labels.large} alt={beer.name} />
+          <img className="label" src={beer.labels.medium} alt={beer.name} />
           <div className="deets">
             {/* {this.renderGlass(beer)} */}
             {this.renderAbv(beer)}
           </div>
           <div className="style">
-            <h3> Info on {beer.style.name}</h3>
+            <h3> Info on {beer.style.shortName}</h3>
             <p>{beer.style.description}</p>
           </div>
         </div>

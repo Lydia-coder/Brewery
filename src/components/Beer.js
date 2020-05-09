@@ -9,14 +9,15 @@ class Beer extends React.Component {
   };
 
   render() {
-    const { name, labels, id } = this.props.details;
+    //console.log(this.props, "check");
+    const { name, labels, id, nameDisplay } = this.props.details;
     const image = labels ? labels.medium : "null.jpg";
 
     return (
       <div className="beer">
         <Link to={`/beer/${id}/${slug(name)}`}>
-          <h2>{name}</h2>
           <img src={image} alt={name} />
+          <h2>{nameDisplay}</h2>
         </Link>
       </div>
     );
