@@ -7,7 +7,7 @@ class Header extends Component {
   };
   render() {
     return (
-      <div className="bk">
+      <div>
         <h1>{this.props.siteName}</h1>
       </div>
     );

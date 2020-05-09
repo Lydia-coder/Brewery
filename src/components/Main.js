@@ -55,7 +55,7 @@ class Main extends Component {
   render() {
     return (
       <div>
-        <Header siteName="Brewery 🍺 " />
+        <Header siteName="Brewery  " />
         <Search history={this.props.history} />
         <Results beers={this.state.beers} loading={this.state.loading} />
       </div>

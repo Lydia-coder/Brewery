@@ -5,7 +5,7 @@ import Loader from "./Loader";
 class Results extends Component {
   render() {
     if (this.props.loading) {
-      return <Loader message="🍻 Beer" />;
+      return <Loader message="loading beer.." />;
     }
 
     return (
