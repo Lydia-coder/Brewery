@@ -28,15 +28,6 @@ class Single extends Component {
       })
       .catch((err) => console.error(err));
   };
-  //   renderGlass = (beer) => {
-  //     if (!beer.glass) return;
-  //     return (
-  //       <div className="glass">
-  //         <img src={`../images/glass-${beer.glass.id}.jpg`} alt={beer.name} />
-  //         <h3>{beer.glass.name} Glass</h3>
-  //       </div>
-  //     );
-  //   };
 
   renderAbv = (beer) => {
     if (!beer.abv) return;
@@ -53,14 +44,15 @@ class Single extends Component {
         <Header siteName="Brewery 🍺" />
         <div className="single-beer">
           <div className="desc">
+            <img
+              className="label"
+              src={beer.labels ? beer.labels.medium : ""}
+              alt={beer.name}
+            />
             <h2>{beer.name}</h2>
             <p>{beer.description}</p>
           </div>
-          <img
-            className="label"
-            src={beer.labels ? beer.labels.medium : ""}
-            alt={beer.name}
-          />
+
           <div className="deets">{this.renderAbv(beer)}</div>
           <div className="style">
             <h3> Info on {beer.style.shortName}</h3>
