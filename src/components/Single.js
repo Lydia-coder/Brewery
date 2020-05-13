@@ -42,6 +42,10 @@ class Single extends Component {
     return (
       <div>
         <Header siteName="Brewery 🍺" />
+        <a href="/" className="prev">
+          <div className="arrow-left"></div>
+        </a>
+
         <div className="single-beer">
           <div className="desc">
             <img
@@ -56,6 +60,7 @@ class Single extends Component {
           <div className="deets">{this.renderAbv(beer)}</div>
           <div className="style">
             <h3> Info on {beer.style.shortName}</h3>
+
             <p>{beer.style.description}</p>
           </div>
         </div>

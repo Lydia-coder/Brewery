@@ -42,8 +42,10 @@ class Main extends Component {
       .then((data) => data.json())
       .then((beers) => {
         console.log(beers, "beers");
-        this.state.beers = beers.data.filter((beer) => !!beer.labels);
-        this.setState({ beers: this.state.beers, loading: false });
+        this.setState({
+          beers: beers.data.filter((beer) => !!beer.labels),
+          loading: false,
+        });
         // save to local storage in case search for this again
         localStorage.setItem(
           `search-${searchTerm}`,
@@ -53,6 +55,7 @@ class Main extends Component {
       .catch((err) => console.error(err));
   };
   render() {
+    console.log(this.state.beers, "beers");
     return (
       <div>
         <Header siteName="Brewery  " />
