@@ -20,7 +20,9 @@ class Single extends Component {
     //console.log(`Loading beer ${beerId}`);
     this.setState({ loading: true });
     const key = "659d5c6b8f3d2447f090119e48202fdb";
-    fetch(`http://api.brewerydb.com/v2/beer/${beerId}?key=${key}`)
+    fetch(
+      `http://api.brewerydb.com/v2/beer/${beerId}?key=${key}&withBreweries=y`
+    )
       .then((data) => data.json())
       .then((res) => {
         console.log(res, "info");
@@ -33,11 +35,13 @@ class Single extends Component {
     if (!beer.abv) return;
     return <div className="abv">ABV: {beer.abv}%</div>;
   };
+
   render() {
     if (this.state.loading) {
       return <Loader message="Pouring a cold one!" />;
     }
     const { beer } = this.state;
+    console.log(beer.breweries.name, "brews?");
 
     return (
       <div>
@@ -54,6 +58,7 @@ class Single extends Component {
               alt={beer.name}
             />
             <h2>{beer.name}</h2>
+
             <p>{beer.description}</p>
           </div>
 

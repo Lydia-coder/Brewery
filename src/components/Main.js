@@ -38,7 +38,10 @@ class Main extends Component {
       return; // stop before fetch happens!
     }
     const key = "659d5c6b8f3d2447f090119e48202fdb";
-    fetch(`http://api.brewerydb.com/v2/search/?key=${key}&q=${searchTerm}`)
+    fetch(
+      `http://api.brewerydb.com/v2/search/?key=${key}&q=${searchTerm}&withBreweries=y`
+      // `http://api.brewerydb.com/v2/beers?key=${key}&withBreweries=y`
+    )
       .then((data) => data.json())
       .then((beers) => {
         this.setState({
