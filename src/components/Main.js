@@ -38,14 +38,14 @@ class Main extends Component {
       return; // stop before fetch happens!
     }
     const key = "659d5c6b8f3d2447f090119e48202fdb";
-    fetch(`http://api.brewerydb.com/v2/search?key=${key}&q=${searchTerm}`)
+    fetch(`http://api.brewerydb.com/v2/search/?key=${key}&q=${searchTerm}`)
       .then((data) => data.json())
       .then((beers) => {
-        console.log(beers, "beers");
         this.setState({
           beers: beers.data.filter((beer) => !!beer.labels),
           loading: false,
         });
+        console.log(beers, "beers");
         // save to local storage in case search for this again
         localStorage.setItem(
           `search-${searchTerm}`,

@@ -1,68 +1,39 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What this project is about
 
-## Available Scripts
+This project is a technincal asigment from PXL widget. The assignment is as follows :
 
-In the project directory, you can run:
+Connect to the BreweryDB API. Your task is to list beer brands per country, provide a search field for them by name and filter/group them by country and by type. Try to use the most efficient methods of calling the api’s endpoints and sorting and filtering the data.
 
-### `npm start`
+Note that the breweryDB exposes a limited data-set and most beers and breweries will be American with some noteworthy exceptions.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You get to pick the JS framework of your choice -- of course you’re also allowed to not use a framework at all (that is discouraged though! :)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Bonus points for efficient employment of general-purpose JS libraries such as Lodash, RxJS, Ramda or similar. Showing when -- and when not -- to use these is highly appreciated!
 
-### `npm test`
+JS framework of your choice.
+Usage of typescript is preferred.
+Points for using general libraries like rxjs, ramda, lodash.
+Optionally create a minimal NodeJS server as adapter- and caching-layer for the API data.
+Use GIT, please provide us with a link to your repository when done and include a README describing the decisions you made to accomplish the assignment.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Table of contents:
 
-### `npm run build`
+- **[Technologies used](#technologies-used)**
+- **[Goals for this project](#goals-for-this-project)**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies used
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+These are some examples of the tech and code I used in this project.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **[react](./src/components)**
+- **[HTML](./public/index.html)**
+- **[CSS](./src/index.css)**
+- **[fetch](./src/components/Main.js)**
+  this API doesn't support CORS, to solve this I used a chrome extention to allow cors.
 
-### `npm run eject`
+## Goals for this project:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- To make a fun and eye catching app that visually stands out
+- To work with the BreweryDB API
+- To show my capabilities in react
+- To deliver a complete project
