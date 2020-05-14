@@ -41,7 +41,27 @@ class Single extends Component {
       return <Loader message="Pouring a cold one!" />;
     }
     const { beer } = this.state;
-    console.log(beer.breweries.name, "brews?");
+    // console.log(beer.breweries.name, "brews?");
+    const brewery = beer.breweries.map((brew) => {
+      console.log(brew.id, "brew?");
+      return brew.name;
+    });
+
+    let beerLocation;
+    beer.breweries.map((brew) => {
+      console.log(brew.locations, "isocode?");
+
+      return brew.locations.map((location) => {
+        console.log(location.country.isoThree, "country displayName?");
+        beerLocation = location.country.isoThree;
+        return location.country.isoThree;
+      });
+    });
+
+    // brew.locations.filter((country) => {
+    //
+    //
+    // });
 
     return (
       <div>
@@ -58,6 +78,8 @@ class Single extends Component {
               alt={beer.name}
             />
             <h2>{beer.name}</h2>
+            <h3> Brewery: {brewery}</h3>
+            <h4>LOCATION : {beerLocation}</h4>
 
             <p>{beer.description}</p>
           </div>

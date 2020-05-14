@@ -1,5 +1,6 @@
 import React from "react";
 //import PropTypes from "prop-types";
+import { ButtonGroup, Dropdown, Button } from "react-bootstrap";
 
 class Search extends React.Component {
   searchRef = React.createRef();
@@ -26,6 +27,28 @@ class Search extends React.Component {
           />
           <input type="submit" value="Search" />
         </form>
+        <Dropdown as={ButtonGroup}>
+          <Button variant="danger">country</Button>
+
+          <Dropdown.Toggle split variant="danger" id="dropdown-split-basic" />
+
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+        <Dropdown as={ButtonGroup}>
+          <Button variant="danger">Type of beer</Button>
+
+          <Dropdown.Toggle split variant="danger" id="dropdown-split-basic" />
+
+          <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </div>
     );
   }

@@ -134,6 +134,7 @@ h1 a {
   border: 0;
   padding: 2rem;
   font-size: 2rem;
+  border-radius: 3px;
 }
 
 .search form > *[type="submit"] {
@@ -184,6 +185,12 @@ h1 a {
 .single-beer h3 {
   font-size: 2rem;
   font-family: "Pacifico", cursive;
+  color: #e13e45;
+}
+.single-beer h4 {
+  font-size: 1rem;
+  font-family: "Comfortaa", cursive;
+  color: #e13e45;
 }
 
 .desc h2 {
@@ -222,4 +229,8 @@ h1 a {
   border-top: 2px solid white;
   border-left: 2px solid white;
   transform: rotate(-45deg);
+}
+
+#dropdown-split-basic {
+  margin-right: 8px;
 }
