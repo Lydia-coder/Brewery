@@ -58,11 +58,6 @@ class Single extends Component {
       });
     });
 
-    // brew.locations.filter((country) => {
-    //
-    //
-    // });
-
     return (
       <div>
         <Header siteName="Brewery 🍺" />

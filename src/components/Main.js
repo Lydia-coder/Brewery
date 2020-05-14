@@ -40,7 +40,7 @@ class Main extends Component {
     const key = "659d5c6b8f3d2447f090119e48202fdb";
     fetch(
       `http://api.brewerydb.com/v2/search/?key=${key}&q=${searchTerm}&withBreweries=y`
-      // `http://api.brewerydb.com/v2/beers?key=${key}&withBreweries=y`
+      //`http://api.brewerydb.com/v2/beers?key=${key}&withBreweries=y`
     )
       .then((data) => data.json())
       .then((beers) => {
@@ -62,7 +62,7 @@ class Main extends Component {
     return (
       <div>
         <Header siteName="Brewery  " />
-        <Search history={this.props.history} />
+        <Search history={this.props.history} beers={this.state.beers} />
         <Results beers={this.state.beers} loading={this.state.loading} />
       </div>
     );
