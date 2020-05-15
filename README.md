@@ -20,6 +20,8 @@ Use GIT, please provide us with a link to your repository when done and include 
 
 - **[Technologies used](#technologies-used)**
 - **[Goals for this project](#goals-for-this-project)**
+- **[UX of this app](#UX-of-app)**
+- **[Create React App](Create-React-App)**
 
 ## Technologies used
 
@@ -37,3 +39,13 @@ These are some examples of the tech and code I used in this project.
 - To work with the BreweryDB API
 - To show my capabilities in react
 - To deliver a complete project
+
+## UX of this app
+
+When you user opens this app they will land on the home page. On this page the user will see a list of beers and a search bar. The user can search on name, type and country of the beer.
+
+## Create React App
+
+This project was scaffolded using the create-react-app cli.
+
+**[The standard create-react-app docs can be found in here](./create-react-app-docs.md)**
