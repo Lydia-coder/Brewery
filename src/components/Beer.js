@@ -11,7 +11,7 @@ class Beer extends React.Component {
   render() {
     //console.log(this.props, "check");
     const { name, labels, id, nameDisplay } = this.props.details;
-    const image = labels ? labels.medium : "null.jpg";
+    const image = labels ? labels.medium : "";
     //console.log(this.props.details, "details??");
 
     return (

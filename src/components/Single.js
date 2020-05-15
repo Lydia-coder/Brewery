@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Loader from "./Loader";
 import PropTypes from "prop-types";
-
 class Single extends Component {
   constructor() {
     super();
