@@ -17,7 +17,7 @@ class Beer extends React.Component {
     return (
       <div className="beer">
         <Link to={`/beer/${id}/${slug(name)}`}>
-          <img src={image} alt={name} />
+          <img src={image} alt={""} />
           <h2>{nameDisplay}</h2>
         </Link>
       </div>

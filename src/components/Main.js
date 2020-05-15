@@ -44,10 +44,8 @@ class Main extends Component {
     )
       .then((data) => data.json())
       .then((beers) => {
-        this.setState({
-          beers: beers.data.filter((beer) => !!beer.labels),
-          loading: false,
-        });
+        const filteredBeers = beers.data.filter((beer) => !!beer.labels);
+        this.setState({ beers: filteredBeers, loading: false });
         console.log(beers, "beers");
         // save to local storage in case search for this again
         localStorage.setItem(
