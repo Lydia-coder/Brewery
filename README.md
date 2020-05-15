@@ -1,3 +1,9 @@
+## DEMO
+
+![DEMO Resume page](https://github.com/Lydia-coder/Brewery/blob/master/images/ezgif.com-video-to-gif.gif)
+
+## What this project is about
+
 ## What this project is about
 
 This project is a technincal asigment from PXL widget. The assignment is as follows :
