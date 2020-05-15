@@ -2,7 +2,6 @@
 
 ![DEMO Resume page](https://github.com/Lydia-coder/Brewery/blob/master/images/ezgif.com-video-to-gif.gif)
 
-## What this project is about
 
 ## What this project is about
 
