@@ -18,6 +18,7 @@ class Beer extends React.Component {
     return (
       <div className="beer">
         <Link to={`/beer/${id}/${slug(name)}`}>
+      //genrate url with beer name
           <img src={image} alt={""} />
           <h2>{nameDisplay}</h2>
         </Link>
