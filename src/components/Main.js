@@ -21,6 +21,7 @@ class Main extends Component {
 
   componentDidUpdate(prevProps) {
     //console.log("did update");
+    // props from params
     const currentSearchTerm = this.props.match.params.searchTerm;
     const oldSearchTerm = prevProps.match.params.searchTerm;
     if (currentSearchTerm !== oldSearchTerm) {
