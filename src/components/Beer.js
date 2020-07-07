@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 class Beer extends React.Component {
   static propTypes = {
     details: PropTypes.object.isRequired,
+    //enforce type object
   };
 
   render() {
